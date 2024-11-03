@@ -8,7 +8,7 @@ api = Api(app)
 # Sample shoe data with 15 detailed entries
 shoes = [
     {
-        "id": str(uuid.uuid4()),
+        "id": 1,
         "name": "Air Max",
         "brand": "Nike",
         "size": 42,
@@ -18,7 +18,7 @@ shoes = [
         "description": "Classic Nike Air Max with cushioned sole for comfort."
     },
     {
-        "id": str(uuid.uuid4()),
+        "id": 2,
         "name": "UltraBoost",
         "brand": "Adidas",
         "size": 41,
@@ -28,7 +28,7 @@ shoes = [
         "description": "Adidas UltraBoost for maximum running comfort and performance."
     },
     {
-        "id": str(uuid.uuid4()),
+        "id": 3,
         "name": "Chuck Taylor All Star",
         "brand": "Converse",
         "size": 40,
@@ -38,7 +38,7 @@ shoes = [
         "description": "Timeless Converse sneakers with high ankle design."
     },
     {
-        "id": str(uuid.uuid4()),
+        "id": 4,
         "name": "Gel-Kayano",
         "brand": "ASICS",
         "size": 43,
@@ -48,7 +48,7 @@ shoes = [
         "description": "ASICS Gel-Kayano for stability and support during runs."
     },
     {
-        "id": str(uuid.uuid4()),
+        "id": 5,
         "name": "Old Skool",
         "brand": "Vans",
         "size": 39,
@@ -58,7 +58,7 @@ shoes = [
         "description": "Classic Vans Old Skool with durable suede and canvas uppers."
     },
     {
-        "id": str(uuid.uuid4()),
+        "id": 6,
         "name": "Gel-Lyte III",
         "brand": "ASICS",
         "size": 42,
@@ -68,7 +68,7 @@ shoes = [
         "description": "Retro ASICS Gel-Lyte III with split-tongue design."
     },
     {
-        "id": str(uuid.uuid4()),
+        "id": 7,
         "name": "NMD_R1",
         "brand": "Adidas",
         "size": 42,
@@ -78,7 +78,7 @@ shoes = [
         "description": "Adidas NMD with boost cushioning for everyday wear."
     },
     {
-        "id": str(uuid.uuid4()),
+        "id": 8,
         "name": "Jordan 1",
         "brand": "Nike",
         "size": 44,
@@ -88,7 +88,7 @@ shoes = [
         "description": "Iconic Air Jordan 1 with premium leather construction."
     },
     {
-        "id": str(uuid.uuid4()),
+        "id": 9,
         "name": "Classic Leather",
         "brand": "Reebok",
         "size": 40,
@@ -98,7 +98,7 @@ shoes = [
         "description": "Reebok Classic Leather shoes for a clean, timeless look."
     },
     {
-        "id": str(uuid.uuid4()),
+        "id": 10,
         "name": "Gel-Nimbus 23",
         "brand": "ASICS",
         "size": 43,
@@ -108,7 +108,7 @@ shoes = [
         "description": "ASICS Gel-Nimbus for plush cushioning and smooth ride."
     },
     {
-        "id": str(uuid.uuid4()),
+        "id": 11,
         "name": "Blazer Mid '77",
         "brand": "Nike",
         "size": 42,
@@ -118,7 +118,7 @@ shoes = [
         "description": "Retro Nike Blazer Mid with classic basketball styling."
     },
     {
-        "id": str(uuid.uuid4()),
+        "id": 12,
         "name": "Stan Smith",
         "brand": "Adidas",
         "size": 41,
@@ -128,7 +128,7 @@ shoes = [
         "description": "Adidas Stan Smith with minimalist design and leather upper."
     },
     {
-        "id": str(uuid.uuid4()),
+        "id": 13,
         "name": "Slip-On",
         "brand": "Vans",
         "size": 40,
@@ -138,7 +138,7 @@ shoes = [
         "description": "Iconic Vans Slip-On with checkerboard pattern."
     },
     {
-        "id": str(uuid.uuid4()),
+        "id": 14,
         "name": "ZoomX Vaporfly",
         "brand": "Nike",
         "size": 42,
@@ -148,7 +148,7 @@ shoes = [
         "description": "Nike ZoomX Vaporfly for elite running performance."
     },
     {
-        "id": str(uuid.uuid4()),
+        "id": 15,
         "name": "Continental 80",
         "brand": "Adidas",
         "size": 41,
