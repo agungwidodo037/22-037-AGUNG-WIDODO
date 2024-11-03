@@ -159,6 +159,12 @@ shoes = [
     }
 ]
 
+# Function to generate the next ID
+def get_next_id():
+    if shoes:
+        return max(shoe["id"] for shoe in shoes) + 1
+    return 1
+
 class ShoeList(Resource):
     def get(self):
         return {
@@ -171,7 +177,7 @@ class ShoeList(Resource):
     def post(self):
         data = request.get_json()
         new_shoe = {
-            "id": str(uuid.uuid4()),
+            "id": get_next_id(),  # Use the next integer ID
             "name": data.get("name"),
             "brand": data.get("brand"),
             "size": data.get("size"),
@@ -185,13 +191,13 @@ class ShoeList(Resource):
 
 class ShoeDetail(Resource):
     def get(self, shoe_id):
-        shoe = next((s for s in shoes if s["id"] == shoe_id), None)
+        shoe = next((s for s in shoes if s["id"] == int(shoe_id)), None)
         if shoe:
             return {"error": False, "message": "success", "shoe": shoe}, 200
         return {"error": True, "message": "Shoe not found"}, 404
 
     def put(self, shoe_id):
-        shoe = next((s for s in shoes if s["id"] == shoe_id), None)
+        shoe = next((s for s in shoes if s["id"] == int(shoe_id)), None)
         if shoe:
             data = request.get_json()
             shoe.update({
@@ -208,11 +214,12 @@ class ShoeDetail(Resource):
 
     def delete(self, shoe_id):
         global shoes
+        shoe_id = int(shoe_id)
         shoes = [s for s in shoes if s["id"] != shoe_id]
         return {"error": False, "message": "Shoe deleted successfully"}, 200
 
 api.add_resource(ShoeList, '/shoes')
-api.add_resource(ShoeDetail, '/shoes/<string:shoe_id>')
+api.add_resource(ShoeDetail, '/shoes/<int:shoe_id>')
 
 if __name__ == '__main__':
     app.run(debug=True)
